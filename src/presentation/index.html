@@ -1,0 +1,373 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewpot" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="./bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="./bower_components/reveal.js/css/theme/white.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="./bower_components/reveal.js/lib/css/zenburn.css">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
+
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+	<section data-background="http://files.www.newmediacampaigns.com/blog/docker-for-php-developers/docker-banner2.jpg">
+        </section>
+
+        <section>
+          <section>
+            <div id="title">operating system basics</div>
+          </section>
+          <section>
+            <div id="quote">An operating system (OS) is system software that manages computer hardware and software resources and provides common services for computer programs. The operating system is a component of the system software in a computer system. Application programs usually require an operating system to function.</div>
+            <div id="ref">https://en.wikipedia.org/wiki/Operating_system</div>
+          </section>
+
+          <section>
+            <img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Operating_system_placement.svg/405px-Operating_system_placement.svg.png">
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <div id="title">the Linux operating system</div>
+          </section>
+          <section>
+            <div id="quote">[...] is a Unix-like and mostly POSIX-compliant computer operating system (OS) assembled under the model of free and open-source software development and distribution. The defining component of Linux is the Linux kernel, an operating system kernel first released on 5 October 1991 by Linus Torvalds</div>
+            <div id="ref">https://en.wikipedia.org/wiki/Linux</div>
+          </section>
+
+          <section>
+            <img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Unix_timeline.en.svg/850px-Unix_timeline.en.svg.png">
+          </section>
+
+          <section>
+            <img data-src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Linux_kernel_map.png">
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <div id="title">Linux distributions</div>
+          </section>
+
+          <section>
+            <div id="quote">A Linux distribution (often called a distro for short) is an operating system made from a software collection, which is based upon the Linux kernel and, often, a package management system.</div>
+            <div id="ref">https://en.wikipedia.org/wiki/Linux_distribution</div>
+          </section>
+
+          <section>
+            <img data-src="https://d37djvu3ytnwxt.cloudfront.net/asset-v1:LinuxFoundationX+LFS101x.2+1T2015+type@asset+block/chapter01_screen18.jpg">
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <div id="title">hardware level virtualization</div>
+          </section>
+
+          <section>
+            <div id="quote">Hardware virtualization or platform virtualization refers to the creation of a virtual machine that acts like a real computer with an operating system.</div>
+            <div id="ref">https://en.wikipedia.org/wiki/Virtualization</div>
+          </section>
+          <section>
+            <img data-src="https://www.drivecms.com/uploads/serverpronto.com/351212359Virtual_Page_graph.jpg">
+          </section>
+
+          <section>
+            <div id="quote">A hypervisor or virtual machine monitor (VMM) is a piece of computer software, firmware or hardware that creates and runs virtual machines.</div>
+            <div id="ref">https://en.wikipedia.org/wiki/Hypervisor</div>
+          </section>
+          <section>
+            <img data-src="http://ptgmedia.pearsoncmg.com/images/chap1_9780133570182/elementLinks/01fig02.jpg">
+          </section>
+
+          <section>
+            <div id="quote">The first hypervisors providing full virtualization were the test tool SIMMON and IBM's one-off research CP-40 system, which began production use in January 1967, and became the first version of IBM's CP/CMS operating system.</div>
+            <div id="ref">https://en.wikipedia.org/wiki/Hypervisor</div>
+          </section>
+          <section data-background="https://upload.wikimedia.org/wikipedia/commons/6/69/IBM360-67AtUmichWithMikeAlexander.jpg">
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <div id="title">operating system level virtualization</div>
+          </section>
+
+          <section>
+            <div id="quote">Operating-system-level virtualization is a server virtualization method in which the kernel of an operating system allows the existence of multiple isolated user-space instances, instead of just one.</div>
+            <div id="ref">https://en.wikipedia.org/wiki/Operating-system-level_virtualization</div>
+          </section>
+
+          <section>
+            <img data-src="https://msdn.microsoft.com/dynimg/IC263315.jpg">
+          </section>
+
+          <section>
+            <div id="subtitle">a few handy Linux kernel features</div>
+          </section>
+
+          <section>
+            <div id="subtitle">namespaces</div>
+            <div class="fragment">
+              <div id="quote"><span id="editorial">[The purpose of a]</span id="editorial"> namespace is to wrap a particular global system resource in an abstraction that makes it appear to the processes within the namespace that they have their own isolated instance of the global resource.<div>
+              <div id="ref">https://lwn.net/Articles/531114/</div>
+          </section>
+
+          <section>
+            <div id="subtitle">cgroups</div>
+            <div class="fragment">
+              <div id="quote">cgroups (abbreviated from control groups) is a Linux kernel feature that limits, accounts for, and isolates the resource usage (CPU, memory, disk I/O, network, etc.) of a collection of processes.</div>
+              <div id="ref">https://en.wikipedia.org/wiki/Cgroups</div>
+          </section>
+
+          <section>
+            <div id="subtitle">UnionFS</div>
+            <div class="fragment">
+              <div id="quote"><span id="editorial">[UnionFs]</span> allows files and directories of separate file systems, known as branches, to be transparently overlaid, forming a single coherent file system.</div>
+              <div id="ref">https://en.wikipedia.org/wiki/Cgroups</div>
+            </div>
+          </section>
+
+          <section>
+            <div id="subtitle">UnionFS</div>
+            <div>
+              <div><span id="editorial">[Branches are]</span> either read-only and read-write file systems, so that writes to the virtual, merged copy are directed to a specific real file system <span id="editorial">[...]</span> also known as copy-on-write.</div>
+              <div id="ref">https://en.wikipedia.org/wiki/Cgroups</div>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <div id="title">Linux containers</div>
+          </section>
+
+          <section>
+            <div id="quote"><span id="editorial">[A Linux container]</span> is an operating-system-level virtualization method for running multiple isolated Linux systems (containers) on a control host using a single Linux kernel.</div>
+            <div id="ref">https://en.wikipedia.org/wiki/LXC</div>
+          </section>
+
+          <section>
+            <div id="subtitle"> some Linux container management applications</div>
+
+            <div class="row">
+              <div class="col-md-4">
+                lxc
+                <img data-src="https://linuxcontainers.org/static/img/containers.png">
+              </div>
+
+              <div class="col-md-4">
+                CoreOS
+                <img data-src="https://coreos.com/assets/images/media/rkt-horizontal-color.png">
+              </div>
+
+              <div class="col-md-4">
+                Docker
+                <img data-src="https://pbs.twimg.com/profile_images/378800000124779041/fbbb494a7eef5f9278c6967b6072ca3e_400x400.png">
+              </div>
+            </div>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <div id="title">Docker workflows</div>
+          </section>
+
+          <section>
+            <div id="quote">Docker is an open platform for developing, shipping, and running applications. </div>
+            <div id="ref">http://www.docker.com/what-docker</div>
+          </section>
+
+          <section>
+            <div id="subtitle">
+              build/distribute/run
+            </div>
+          </section>
+
+          <section>
+            <div id="subtitle">Docker images</div>
+            <div id="quote">
+              A Docker image is a read-only template. For example, an image could contain an Ubuntu operating system with Apache and your web application installed.
+            </div>
+            <div id="ref">https://docs.docker.com/engine/understanding-docker/</div>
+          </section>
+
+          <section>
+            <div id="subtitle">Docker images</div>
+            <div id="quote">
+              Images are used to create Docker containers. Docker provides a simple way to build new images or update existing images, or you can download Docker images that other people have already created.
+            </div>
+            <div id="ref">https://docs.docker.com/engine/understanding-docker/</div>
+          </section>
+
+          <section>
+            <div id="subtitle">Docker images</div>
+            <div id="quote">
+              Docker images are the <strong>build</strong> component of Docker.
+            </div>
+            <div id="ref">https://docs.docker.com/engine/understanding-docker/</div>
+          </section>
+
+          <section>
+            <div id="subtitle">Docker registries</div>
+            <div id="quote">
+              Docker registries hold images. These are public or private stores from which you upload or download images.
+            </div>
+            <div id="ref">https://docs.docker.com/engine/understanding-docker/</div>
+          </section>
+
+          <section>
+            <div id="subtitle">Docker registries</div>
+            <div id="quote">
+              The public Docker registry is provided with the Docker Hub. It serves a huge collection of existing images for your use. These can be images you create yourself or you can use images that others have previously created.
+            </div>
+            <div id="ref">https://docs.docker.com/engine/understanding-docker/</div>
+          </section>
+
+          <section>
+            <div id="subtitle">Docker registries</div>
+            <div id="quote">
+              Docker registries are the <strong>distribution</strong> component of Docker.
+            </div>
+            <div id="ref">https://docs.docker.com/engine/understanding-docker/</div>
+          </section>
+
+          <section>
+            <div id="subtitle">Docker containers</div>
+            <div id="quote">
+              Docker containers are similar to a directory. A Docker container holds everything that is needed for an application to run.
+            </div>
+            <div id="ref">https://docs.docker.com/engine/understanding-docker/</div>
+          </section>
+
+          <section>
+            <div id="subtitle">Docker containers</div>
+            <div id="quote">
+              Each container is created from a Docker image. Docker containers can be run, started, stopped, moved, and deleted. Each container is an isolated and secure application platform.
+            </div>
+            <div id="ref">https://docs.docker.com/engine/understanding-docker/</div>
+          </section>
+
+          <section>
+            <div id="subtitle">Docker containers</div>
+            <div id="quote">
+               Docker containers are the <strong>run</strong> component of Docker.
+            </div>
+            <div id="ref">https://docs.docker.com/engine/understanding-docker/</div>
+          </section>
+
+          <section>
+            <div id="subtitle">
+              build/distribute/run
+            </div>
+            <div class="fragment" id="subtitle">
+              images/registries/containers
+            </div>
+          </section>
+
+          <section>
+            <img data-src="https://docs.docker.com/engine/article-img/architecture.svg">
+          </section>
+
+          <section>
+            <img data-src="http://www.docker.com/sites/default/files/products/what_is_layered_filesystems_sm.png">
+          </section>
+
+          <section>
+            <div class="row">
+              <div class="col-md-6">
+                <img style="height:491px" data-src="http://www.docker.com/sites/default/files/what-is-docker-diagram.png">
+                Virtual Machines
+              </div>
+              <div class="col-md-6">
+                <img style="heoght:317px; margin-top:182px" data-src="http://www.docker.com/sites/default/files/what-is-vm-diagram.png">
+                Linux containers
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <div id="title">Docker High Level Architecture</div>
+          </section>
+
+          <section>
+            <div id="subtitle">Docker daemon</div>
+            <div id="quote">
+              Docker daemon <span class="editorial">is</span> building, distributing and running Docker containers.
+            </div>
+            <div id="ref">https://docs.docker.com/engine/understanding-docker/</div>
+          </section>
+
+          <section>
+            <div id="subtitle">Docker client</div>
+            <div id="quote">
+              The user does not directly interact with the daemon, but instead through the Docker client.
+            </div>
+            <div id="ref">https://docs.docker.com/engine/understanding-docker/</div>
+          </section>
+
+          <section>
+            <div id="subtitle">Docker client</div>
+            <div id="quote">
+              Docker client and daemon communicate via sockets or through a RESTful API.
+            </div>
+            <div id="ref">https://docs.docker.com/engine/understanding-docker/</div>
+          </section>
+
+          <section>
+            <div id="subtitle">Docker client</div>
+            <div id="quote">
+              Both the Docker client and the daemon <em>can</em> run on the same system, or you can connect a Docker client to a <em>remote</em> Docker daemon.
+            </div>
+            <div id="ref">https://docs.docker.com/engine/understanding-docker/</div>
+          </section>
+        </section>
+
+        <section data-background="https://media.giphy.com/media/jYAGkoghdmD9S/giphy.gif">
+
+        </section>
+
+        </div>
+        </div>
+    </div>
+
+    <script src="./bower_components/reveal.js/lib/js/head.min.js"></script>
+    <script src="./bower_components/reveal.js/js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+      history: true,
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [
+      { src: './bower_components/reveal.js/plugin/markdown/marked.js' },
+      { src: './bower_components/reveal.js/plugin/markdown/markdown.js' },
+      { src: './bower_components/reveal.js/plugin/notes/notes.js', async: true },
+      { src: './bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+      ]
+      });
+    </script>
+
+  </body>
+</html>
